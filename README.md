@@ -66,17 +66,132 @@ Field-theoretic synthesis confirms that the prime vacuum is an **Extreme Type-II
 
 ---
 
+## Repository Structure
+
+```text
+prime-phase-networks/
+├── README.md
+├── 01_MultiBody_Prime_Phase_Networks_Volume_I.pdf
+├── 02_MultiBody_Prime_Phase_Networks_Volume_II.pdf
+├── vol1_arithmetic_gue/
+│   ├── 01_prime_triad_hardcore_gap_audit.py
+│   ├── 02_prime_gue_wigner_surmise_audit.py
+│   ├── 03_prime_effective_hamiltonian_repulsion_audit.py
+│   ├── 04_prime_cayley_unitary_selfadjoint_audit.py
+│   ├── 05_prime_high_energy_stiffness_divergence_audit.py
+│   ├── 06_prime_baker_bound_tightness_audit.py
+│   ├── 07_prime_higher_order_freezeout_audit.py
+│   ├── 08_prime_saddle_point_trigger_audit.py
+│   └── 09_prime_volume1_final_synthesis_audit.py
+└── vol2_vortex_grh/
+    ├── 10_prime_complex_strip_order_parameter_audit.py
+    ├── 11_prime_topological_phase_winding_audit.py
+    ├── 12_prime_critical_line_pinning_force_audit.py
+    ├── 13_prime_2d_vortex_lattice_quiver_audit.py
+    ├── 14_prime_lehmer_pair_extreme_repulsion_audit.py
+    ├── 15_prime_eigenvector_porter_thomas_chaos_audit.py
+    ├── 16_prime_generalized_riemann_hypothesis_grh_audit.py
+    ├── 17_prime_hilbert_polya_linearization_audit.py
+    ├── 18_prime_2d_ginzburg_landau_field_theory_audit.py
+    └── 19_prime_gutzwiller_riemann_trace_formula_audit.py
+```
+
+---
+
 ## Quick Start and Reproduction
 
 ```bash
 # 1. Clone this repository
-git clone [https://github.com/CitizenKorea/prime-phase-networks.git](https://github.com/CitizenKorea/prime-phase-networks.git)
+git clone https://github.com/CitizenKorea/prime-phase-networks.git
 cd prime-phase-networks
 
 # 2. Install dependencies (standard scientific stack)
 pip install numpy scipy matplotlib
 
 # 3. Execute core verification modules
-python 14_prime_lehmer_pair_extreme_repulsion_audit.py
-python 18_prime_2d_ginzburg_landau_field_theory_audit.py
-python 19_prime_gutzwiller_riemann_trace_formula_audit.py
+python vol2_vortex_grh/14_prime_lehmer_pair_extreme_repulsion_audit.py
+python vol2_vortex_grh/18_prime_2d_ginzburg_landau_field_theory_audit.py
+python vol2_vortex_grh/19_prime_gutzwiller_riemann_trace_formula_audit.py
+```
+
+### Expected Terminal Output (Module 19: Gutzwiller-Riemann Trace Duality)
+
+```text
+=====================================================================================
+  PRIME PHASE NETWORK: GUTZWILLER-RIEMANN TRACE DUALITY AUDIT
+  Input Riemann Zeros    : 50 critical levels (t in [14.13, 143.11])
+  Dual Geodesic Domain   : tau in [0.20, 3.20] (1200 high-res points)
+=====================================================================================
+[*] Performing spectral Fourier-dual projection of Riemann zeros...
+[*] Synthesizing von Mangoldt prime periodic orbit comb...
+[*] Auditing trace formula cross-correlation and peak alignment...
+
+-------------------------------------------------------------------------------------
+  GUTZWILLER-RIEMANN PERIODIC ORBIT RECONSTRUCTION TABLE:
+-------------------------------------------------------------------------------------
+  Prime Geodesic | True Length tau | Nearest Zero Dual Peak | Error | Duality Status
+-------------------------------------------------------------------------------------
+   Orbit ln( 2)   :    0.69315    |         0.69291      | 0.0002| RESONANT
+   Orbit ln( 3)   :    1.09861    |         1.09825      | 0.0004| RESONANT
+   Orbit ln( 4)   :    1.38629    |         1.38599      | 0.0003| RESONANT
+   Orbit ln( 5)   :    1.60944    |         1.60867      | 0.0008| RESONANT
+   Orbit ln( 7)   :    1.94591    |         1.94646      | 0.0005| RESONANT
+   Orbit ln( 8)   :    2.07944    |         2.08157      | 0.0021| RESONANT
+   Orbit ln( 9)   :    2.19722    |         2.19666      | 0.0006| RESONANT
+   Orbit ln(11)   :    2.39790    |         2.39683      | 0.0011| RESONANT
+   Orbit ln(13)   :    2.56495    |         2.56447      | 0.0005| RESONANT
+-------------------------------------------------------------------------------------
+  - Semiclassical Cross-Correlation Score : R(0) = 0.6149 (Strong Phase Coherence)
+  - Mean Orbit Reconstruction Error       : 0.0007
+-------------------------------------------------------------------------------------
+
+[+] Trace formula visual exported: 19_prime_gutzwiller_riemann_trace_formula_audit.png
+[+] Total execution time: 0.85 s
+=====================================================================================
+```
+
+---
+
+## Verification Suite and Monograph Artifacts
+
+### vol1_arithmetic_gue/ (Volume I Modules: 1D Arithmetic Frustration & GUE Rigidity)
+* **`01_prime_triad_hardcore_gap_audit.py`**: Full audit of 2,275,280 prime triads and Baker integer lower bound convergence.
+* **`02_prime_gue_wigner_surmise_audit.py`**: Unfolding and Wigner surmise level-spacing distribution ($\beta = 2.0161$).
+* **`03_prime_effective_hamiltonian_repulsion_audit.py`**: Avoided crossing verification via 3-body coupling $g_3^* \approx 0.3654$.
+* **`04_prime_cayley_unitary_selfadjoint_audit.py`**: Cayley transform unitarity test ($\Vert{}\mathcal{U}^\dagger\mathcal{U} - I\Vert{}_F \le 2.82 \times 10^{-15}$).
+* **`05_prime_high_energy_stiffness_divergence_audit.py`**: Asymptotic restoring stiffness scaling ($K(t) \sim t^{+0.6292}$) across 50 zeros.
+* **`06_prime_baker_bound_tightness_audit.py`**: Sophie Germain/Cunningham chain extremal triad saturation analysis.
+* **`07_prime_higher_order_freezeout_audit.py`**: $k$-body interaction freeze-out proof for $k \ge 4$ via $\zeta(k) - 1$.
+* **`08_prime_saddle_point_trigger_audit.py`**: Semiclassical 1D saddle-point phase interference and bounce trajectories.
+* **`09_prime_volume1_final_synthesis_audit.py`**: Complete synthesis and comprehensive benchmark suite for Volume I.
+
+### vol2_vortex_grh/ (Volume II Modules: 2D Superfluid Vortex Lattices, Lehmer Pairs & GRH)
+* **`10_prime_complex_strip_order_parameter_audit.py`**: 2D order parameter $\Psi(\sigma, t)$ synthesis across the critical strip.
+* **`11_prime_topological_phase_winding_audit.py`**: Discrete Cauchy-Riemann contour integration and phase winding checks.
+* **`12_prime_critical_line_pinning_force_audit.py`**: Bidirectional transverse pinning force and harmonic restoring well.
+* **`13_prime_2d_vortex_lattice_quiver_audit.py`**: 41,561-plaquette circulation scan and Abrikosov vortex lattice quiver field.
+* **`14_prime_lehmer_pair_extreme_repulsion_audit.py`**: Extreme strain audit of Lehmer pair ($t \approx 7005.08$) and Berry gauge singularity ($\vert{}\Omega\vert{} > 6.4 \times 10^4$).
+* **`15_prime_eigenvector_porter_thomas_chaos_audit.py`**: Porter-Thomas statistics and quantum many-body scarring ($\text{IPR} \approx 0.4070$) on 62,500 components.
+* **`16_prime_generalized_riemann_hypothesis_grh_audit.py`**: Dirichlet character gauge invariance ($\chi_{-4}$ mod 4) and $L$-function vortex pinning.
+* **`17_prime_hilbert_polya_linearization_audit.py`**: SVD rank analysis and spectrum extraction under 1D infinitesimal generators.
+* **`18_prime_2d_ginzburg_landau_field_theory_audit.py`**: Type-II superfluidity ($\kappa = 4.2605$) and derivation of Dyson's log-gas ($U = -2\ln d$).
+* **`19_prime_gutzwiller_riemann_trace_formula_audit.py`**: Semiclassical Gutzwiller-Riemann duality reconstructing prime lengths to $0.0007$ error.
+
+### Monograph PDF Files
+* **`01_MultiBody_Prime_Phase_Networks_Volume_I.pdf`**: Complete Volume I monograph (10 pages, formal publication layout).
+* **`02_MultiBody_Prime_Phase_Networks_Volume_II.pdf`**: Complete Volume II monograph (11 pages, formal publication layout).
+
+---
+
+## Citation
+
+```bibtex
+@article{citizen2026multibody,
+  title={Multi-Body Prime Phase Networks: Arithmetic Frustration, GUE Spectral Rigidity, 2D Superfluid Vortex Lattices, and the Generalized Riemann Hypothesis},
+  author={A Citizen of the Republic of Korea},
+  journal={Zenodo Archive},
+  year={2026},
+  doi={10.5281/zenodo.23005854},
+  url={https://doi.org/10.5281/zenodo.23005854}
+}
+```
